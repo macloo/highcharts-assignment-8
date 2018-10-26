@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> HIV Epidemic   </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/new.css">
+ <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/themes/dark-unica.js"></script>
+
+</head>
+
+<Body>
+
+<header>
+  <h1>  Human Immunodeficiency Virus (HIV)  </h1>
+  <p> By: Alessia Beck </p>
+
+</header>
+
+<section id="HIV">
+  <p> HIV is a virus that attacks immune cells rapidly. It is spread through body fluids that go after the immune system attacking CD4 cells called T cells. This does not allow the human body to fight diseases and infections. HIV is an ongoing epidemic in the United States that can be transmitted sexually, perinatally and from blood transmission. On going research is constantly being done to find the permanent cure for this life threatnening disease. </p>
+
+</section>
+
+<div id="container"></div>
+
+<section id= "data">
+  <p> This data was obtain from <a href= "https://gis.cdc.gov/grasp/nchhstpatlas/tables.html"> Center for Disease Control and Prevention</a></p>
+</section>
+
+<script>
+
+Highcharts.chart('container', {
+
+  title: {
+    text: 'HIV Deaths & Diagnoses in U.S. 2010- 2015'
+  },
+
+  subtitle: {
+    text: 'Source:Center for Disease Control and Prevention, https://www.cdc.gov/ '
+  },
+
+  yAxis: {
+    title: {
+      text: 'Deaths / Diagnoses'
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle'
+  },
+
+  plotOptions: {
+    series: {
+      label: {
+        connectorAllowed: false
+      },
+      pointStart: 2010
+    }
+  },
+
+  series: [{
+    name: 'Diagnoses',
+    data: [43547, 41786, 40928, 39466, 40096,39741]
+  },{  name: 'Deaths',
+     data: [17116, 16596, 16280, 16102, 16253,15454]
+  }],
+
+  responsive: {
+    rules: [{
+      condition: {
+        maxWidth: 500
+      },
+      chartOptions: {
+        legend: {
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom'
+        }
+      }
+    }]
+    }
+});
+
+</script>
+
+
+<div id="container1" style="min-width: 800px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+
+<script>
+Highcharts.chart('container1', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'U.S. HIV Diagnoses: Race and Ethnicity (Age 13+)'
+  },
+  subtitle: {
+    text: 'Source: <a href="https://gis.cdc.gov/</a>'
+  },
+  xAxis: {
+    categories: ['American Indian/Alaska Native', 'Asian', 'Multiple races', 'Hispanic/Latino', 'Black/African American','Native Hawaiian/Other Pacific Islander', 'White'],
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'HIV Cases out of 100,000',
+      align: 'high'
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  tooltip: {
+    valueSuffix: ' thounsands'
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: true
+      }
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle',
+    x: -20,
+    y: -10,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+    shadow: true
+  },
+  credits: {
+    enabled: false
+  },
+
+  series: [{
+    name: 'Year 2010',
+    data: [163, 683,1735,9435,19889,51, 11591]
+  }, {
+    name: 'Year 2011',
+    data: [143, 736,1599, 9268, 18874,55, 11111]
+  }, {
+    name: 'Year 2012',
+    data: [176, 771,1555,9275, 18090,54, 11007]
+  }, {
+    name: 'Year 2013',
+    data: [154, 794, 1423,9086,17348, 49, 10612]
+  }, {
+    name: 'Year 2014',
+    data: [184, 926, 1244,9692,17418,   43, 10589]
+  }, {
+    name: 'Year 2015',
+    data: [195, 938,1054,9682, 17345,  80, 10447]
+  }],
+});
+</script>
+
+<section id= "data1">
+  <p> This data was obtain from <a href= "https://gis.cdc.gov/grasp/nchhstpatlas/tables.html"> Center for Disease Control and Prevention</a></p>
+</section>
+
+<footer>
+  <p> Created by Alessia Beck, 2018. Copied from The Beck Foundation of Knowledge </p>
+</footer>
+
+
+</body>
+</html>
