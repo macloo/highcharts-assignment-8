@@ -9,17 +9,17 @@ Highcharts.chart('container', {
         text: 'Florida Population 2011-2023'
     },
     subtitle: {
-        text: 'Source: WorldClimate.com'
+        text: 'Source: united-states.reaproject.org'
     },
     xAxis: {
         categories: [
-            '2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023',        ],
+            '2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023', ],
         crosshair: true
     },
     yAxis: {
         min: 0,
         title: {
-            text: 'Rainfall (mm)'
+            text: 'Population (millions)'
         }
     },
     tooltip: {
@@ -38,8 +38,7 @@ Highcharts.chart('container', {
     },
     series: [{
         name: 'Total Population',
-        data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4,
-            194.1, 95.6, 54.4]
+        data: [19.3, 19.5, 19.8, 20.1, 20.5, 20.9, 21.1, 21.3, 21.6, 21.8, 22.2]
 
     },]
 });
